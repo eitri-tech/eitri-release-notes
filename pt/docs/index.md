@@ -4,7 +4,7 @@
 
 ## Sobre a release
 
-A release do dia 24/02/2025 atualiza a Eitri Machine no Android para o targetSdk 34, que equivale à versão 14 do SO. Com isso, a machine terá compatibilidade a novos recursos do Android! 
+A release do dia 24/02/2025 atualiza a Eitri Machine no Android para o targetSdk 34, que equivale à versão 14 do SO. Com isso, a machine terá compatibilidade a novos recursos do Android!
 Uma série de novas funcionalidades também foram disponibilizadas ao desenvolvedor, como listagem e remoção de notificações agendadas, suporte para intentFlags em run e RunInput, funções de reload de um eitri-app e simulação de bottom bar no Eitri Play para desenvolvimento de múlitplos workspaces.
 Uma série de correções também foi feita para melhorar a qualidade dos eitri-apps, como a eliminação de um memory leak no uso da bottom bar, correção do número de versão dos apps gerados pelo app generator e a correção de modal de confirmação no Eitri Doctor.
 
@@ -14,9 +14,9 @@ Uma série de correções também foi feita para melhorar a qualidade dos eitri-
 
 ### Novas features
 
-#### Suporte para intentFlags em run e RunInput
+#### Suporte para chamadas de serviços e componentes na execução de um Eitri-App
 
-No Android, agora o modelo `RunInput` tem a propriedade `#!kotlin intentFlags: Int?`, usada no método `run` da classe `SuperApp` para fazer a execução com a passagem de um intent.
+No Android, agora o modelo `RunInput` tem a propriedade `#!kotlin intentFlags: Int?`, permitindo que se chame uma tela ou serviço nativo ao executar um eitri-app
 
 #### Listagem e cancelamento de notificações agendadas
 
@@ -64,16 +64,6 @@ Foi corrigido um erro presente apenas no iOS que fazia com que a bottom bar deix
 #### Corrige lógica de modal de confirmação do Eitri Doctor
 
 Corrige lógica do componente `PrompModal.jsx`  no Eitri Doctor para que ele passe a abrir.
-
----
-
-## Eitri Shopping v.2.1.0
-
-### Correções
-
-#### Correções no número de versão do template do app-shopping
-
-O número de versão dos aplicativos gerados pelo app generator, contido em `build.gradle.kts` no Android e `project.pbxproj` no iOS, foi corrigido para `2.0.0`.
 
 ---
 
