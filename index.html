@@ -319,9 +319,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#suporte-para-intentflags-em-run-e-runinput" class="md-nav__link">
+  <a href="#suporte-para-chamadas-de-servicos-e-componentes-na-execucao-de-um-eitri-app" class="md-nav__link">
     <span class="md-ellipsis">
-      Suporte para intentFlags em run e RunInput
+      Suporte para chamadas de serviços e componentes na execução de um Eitri-App
     </span>
   </a>
   
@@ -391,45 +391,6 @@
   <a href="#corrige-logica-de-modal-de-confirmacao-do-eitri-doctor" class="md-nav__link">
     <span class="md-ellipsis">
       Corrige lógica de modal de confirmação do Eitri Doctor
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eitri-shopping-v210" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eitri Shopping v.2.1.0
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eitri Shopping v.2.1.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#correcoes_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correções
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Correções">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#correcoes-no-numero-de-versao-do-template-do-app-shopping" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correções no número de versão do template do app-shopping
     </span>
   </a>
   
@@ -557,9 +518,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#suporte-para-intentflags-em-run-e-runinput" class="md-nav__link">
+  <a href="#suporte-para-chamadas-de-servicos-e-componentes-na-execucao-de-um-eitri-app" class="md-nav__link">
     <span class="md-ellipsis">
-      Suporte para intentFlags em run e RunInput
+      Suporte para chamadas de serviços e componentes na execução de um Eitri-App
     </span>
   </a>
   
@@ -645,45 +606,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#eitri-shopping-v210" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eitri Shopping v.2.1.0
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Eitri Shopping v.2.1.0">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#correcoes_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correções
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Correções">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#correcoes-no-numero-de-versao-do-template-do-app-shopping" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correções no número de versão do template do app-shopping
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#luminus-vxxx" class="md-nav__link">
     <span class="md-ellipsis">
       Luminus v.X.X.X
@@ -741,14 +663,14 @@
 <h1 id="eitri-developer-overview">Eitri Developer Overview</h1>
 <h2 id="release-24022025">Release - 24/02/2025</h2>
 <h2 id="sobre-a-release">Sobre a release</h2>
-<p>A release do dia 24/02/2025 atualiza a Eitri Machine no Android para o targetSdk 34, que equivale à versão 14 do SO. Com isso, a machine terá compatibilidade a novos recursos do Android! 
+<p>A release do dia 24/02/2025 atualiza a Eitri Machine no Android para o targetSdk 34, que equivale à versão 14 do SO. Com isso, a machine terá compatibilidade a novos recursos do Android!
 Uma série de novas funcionalidades também foram disponibilizadas ao desenvolvedor, como listagem e remoção de notificações agendadas, suporte para intentFlags em run e RunInput, funções de reload de um eitri-app e simulação de bottom bar no Eitri Play para desenvolvimento de múlitplos workspaces.
 Uma série de correções também foi feita para melhorar a qualidade dos eitri-apps, como a eliminação de um memory leak no uso da bottom bar, correção do número de versão dos apps gerados pelo app generator e a correção de modal de confirmação no Eitri Doctor.</p>
 <hr />
 <h2 id="eitri-machine-v330">Eitri Machine v.3.3.0</h2>
 <h3 id="novas-features">Novas features</h3>
-<h4 id="suporte-para-intentflags-em-run-e-runinput">Suporte para intentFlags em run e RunInput</h4>
-<p>No Android, agora o modelo <code>RunInput</code> tem a propriedade <code class="highlight"><span class="n">intentFlags</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span></code>, usada no método <code>run</code> da classe <code>SuperApp</code> para fazer a execução com a passagem de um intent.</p>
+<h4 id="suporte-para-chamadas-de-servicos-e-componentes-na-execucao-de-um-eitri-app">Suporte para chamadas de serviços e componentes na execução de um Eitri-App</h4>
+<p>No Android, agora o modelo <code>RunInput</code> tem a propriedade <code class="highlight"><span class="n">intentFlags</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span></code>, permitindo que se chame uma tela ou serviço nativo ao executar um eitri-app</p>
 <h4 id="listagem-e-cancelamento-de-notificacoes-agendadas">Listagem e cancelamento de notificações agendadas</h4>
 <p>Agora é possível listar e remover as notificações que foram agendadas por <code class="highlight"><span class="k">async</span><span class="w"> </span><span class="nx">Eitri</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">sendLocalPush</span><span class="p">()</span></code>. Isso é feito através de dois novos métodos, <code class="highlight"><span class="k">async</span><span class="w"> </span><span class="nx">Eitri</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">listLocalPushes</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">NotificationSchedules</span><span class="o">&gt;</span></code> e <code class="highlight"><span class="k">async</span><span class="w"> </span><span class="nx">Eitri</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">cancelLocalPush</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span></code>.
 Um exemplo de utilização de listLocalPushes é como tal:</p>
@@ -778,11 +700,6 @@ Um exemplo de utilização de listLocalPushes é como tal:</p>
 <p>Foi corrigido um erro presente apenas no iOS que fazia com que a bottom bar deixasse de abrir e fechar após um longo tempo de execução do eitri-app devido à problemas com gerenciamento da RAM.</p>
 <h4 id="corrige-logica-de-modal-de-confirmacao-do-eitri-doctor">Corrige lógica de modal de confirmação do Eitri Doctor</h4>
 <p>Corrige lógica do componente <code>PrompModal.jsx</code>  no Eitri Doctor para que ele passe a abrir.</p>
-<hr />
-<h2 id="eitri-shopping-v210">Eitri Shopping v.2.1.0</h2>
-<h3 id="correcoes_1">Correções</h3>
-<h4 id="correcoes-no-numero-de-versao-do-template-do-app-shopping">Correções no número de versão do template do app-shopping</h4>
-<p>O número de versão dos aplicativos gerados pelo app generator, contido em <code>build.gradle.kts</code> no Android e <code>project.pbxproj</code> no iOS, foi corrigido para <code>2.0.0</code>.</p>
 <hr />
 <h2 id="luminus-vxxx">Luminus v.X.X.X</h2>
 <h3 id="novas-features_1">Novas features</h3>
