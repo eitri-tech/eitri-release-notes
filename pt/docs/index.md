@@ -14,11 +14,11 @@ Uma série de correções também foi feita para melhorar a qualidade dos eitri-
 
 ### Novas features
 
-### Suporte para intentFlags em run e RunInput
+#### Suporte para intentFlags em run e RunInput
 
 No Android, agora o modelo `RunInput` tem a propriedade `#!kotlin intentFlags: Int?`, usada no método `run` da classe `SuperApp` para fazer a execução com a passagem de um intent.
 
-### Listagem e cancelamento de notificações agendadas
+#### Listagem e cancelamento de notificações agendadas
 
 Agora é possível listar e remover as notificações que foram agendadas por `#!js async Eitri.notification.sendLocalPush()`. Isso é feito através de dois novos métodos, `#!js async Eitri.notification.listLocalPushes(): Promise<NotificationSchedules>` e `#!js async Eitri.notification.cancelLocalPush(): Promise<void>`.
 Um exemplo de utilização de listLocalPushes é como tal:
@@ -42,3 +42,75 @@ Já `cancelLocalPush` é usado da seguinte forma:
 ```js
 await Eitri.notification.cancelLocalPush({ id: "1" });
 ```
+
+#### Reload de eitri-app
+
+Foi adicionada a funcionalidade de recarregar um eitri-app, acessada através do método `#!js async Eitri.navigation.reload(): Promise<void>`.
+
+#### Simulação de bottom bar
+
+O Eitri Play agora pode simular bottom bars para ajudar no desenvolvimento com múltiplos workspaces.
+
+### Correções
+
+#### Memory Leak nas bottom bars
+
+Foi corrigido um memory leak que afetava as views de bottom bar no Android.
+
+#### Bottom bar para de funcionar após longo tempo em execução
+
+Foi corrigido um erro presente apenas no iOS que fazia com que a bottom bar deixasse de abrir e fechar após um longo tempo de execução do eitri-app devido à problemas com gerenciamento da RAM.
+
+#### Corrige lógica de modal de confirmação do Eitri Doctor
+
+Corrige lógica do componente `PrompModal.jsx`  no Eitri Doctor para que ele passe a abrir.
+
+---
+
+## Eitri Shopping v.2.1.0
+
+### Correções
+
+#### Correções no número de versão do template do app-shopping
+
+O número de versão dos aplicativos gerados pelo app generator, contido em `build.gradle.kts` no Android e `project.pbxproj` no iOS, foi corrigido para `2.0.0`.
+
+---
+
+## Luminus v.X.X.X
+
+### Novas features
+
+#### Carregamento "on demand" de imagens que usam lazy loading
+As tags `#!jsx <ImageView>` e `#!jsx <Image>` agora possuem um atributo `loading`, que aceita um valor ondemand que força o carregamento da imagem.
+Por exemplo:
+
+```jsx
+
+<Image
+    src={img}
+    loading="ondemand"
+    width="100%"
+    dataCy="image-width"
+    marginBottom="small"
+/>
+
+```
+
+```jsx
+
+[1, 2, 3, 4, 5].map((index) => (
+    <ImageView
+      loading="ondemand"
+      width="20%"
+      aspectRatio="1:1"
+      key={"image_${index}"}
+      src={"http://lorempixel.com.br/800/800/?${index}"}
+      borderRadius="pill"
+      borderWidth="hairline"
+	/>
+))
+
+```
+
+---

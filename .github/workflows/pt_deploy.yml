@@ -25,7 +25,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
-      - run: bash -c 'cd pt && mkdocs build'
+      - run: bash -c 'cd pt && mkdocs gh-deploy'
 
       - name: Checkout
         uses: actions/checkout@v1
