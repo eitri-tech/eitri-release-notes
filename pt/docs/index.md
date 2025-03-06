@@ -51,6 +51,8 @@ Foi adicionada a funcionalidade de recarregar um eitri-app, acessada através do
 
 O Eitri Play agora pode simular bottom bars para ajudar no desenvolvimento com múltiplos workspaces.
 
+<img style="height: 540px !important; display: block; margin: 0 auto; align-self: center !important;" src="assets/gifs/bottomBarSim.gif"/>
+
 ### Correções
 
 #### Memory Leak nas bottom bars
@@ -63,7 +65,15 @@ Foi corrigido um erro presente apenas no iOS que fazia com que a bottom bar deix
 
 #### Corrige lógica de modal de confirmação do Eitri Doctor
 
-Corrige lógica do componente `PrompModal.jsx`  no Eitri Doctor para que ele passe a abrir.
+Corrige lógica do componente `PrompModal.jsx` no Eitri Doctor para que ele passe a abrir.
+
+---
+
+## Eitri Play
+
+### Atualizações
+
+Nova versão do Eitri Play passa a vir com a Eitri Machine atualizada para a versão 3.3.0.
 
 ---
 
@@ -72,6 +82,7 @@ Corrige lógica do componente `PrompModal.jsx`  no Eitri Doctor para que ele pas
 ### Novas features
 
 #### Carregamento "on demand" de imagens que usam lazy loading
+
 As tags `#!jsx <ImageView>` e `#!jsx <Image>` agora possuem um atributo `loading`, que aceita um valor ondemand que força o carregamento da imagem.
 Por exemplo:
 
