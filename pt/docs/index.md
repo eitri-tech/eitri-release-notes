@@ -63,7 +63,15 @@ Foi corrigido um erro presente apenas no iOS que fazia com que a bottom bar deix
 
 #### Corrige lógica de modal de confirmação do Eitri Doctor
 
-Corrige lógica do componente `PrompModal.jsx`  no Eitri Doctor para que ele passe a abrir.
+Corrige lógica do componente `PrompModal.jsx` no Eitri Doctor para que ele passe a abrir.
+
+---
+
+## Eitri Play
+
+# Atualizações
+
+Nova versão do Eitri Play passa a vir com a Eitri Machine atualizada para a versão 3.3.0.
 
 ---
 
