@@ -4,6 +4,10 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
   - pymdownx.inlinehilite
+plugins:
+  - redirects:
+      redirect_maps:
+        'index.md': '24-02-2025.md' # Sempre atualizar para release note mais recente
 theme:
   # Tema visual utilizado
   name: material

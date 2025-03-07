@@ -25,6 +25,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material
+      - run: pip install mkdocs-redirects
       - run: bash -c 'cd pt && git pull && mkdocs gh-deploy'
 
       - name: Checkout
