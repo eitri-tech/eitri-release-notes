@@ -10,7 +10,11 @@ plugins:
         'index.md': '24-02-2025.md' # Sempre atualizar para release note mais recente
 nav:
   - Release - 24/02/2025: '24-02-2025.md'
+extra_css:
+  - stylesheets/extra.css
 theme:
+  logo: assets/overrides/eitri-logo.svg
+  favicon: assets/overrides/android-chrome-192x192.png
   # Tema visual utilizado
   name: material
   palette:
