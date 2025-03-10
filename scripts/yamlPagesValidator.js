@@ -5,11 +5,11 @@ import * as yaml from 'yaml';
 console.log("Current working directory:", process.cwd());
 const args = argv.slice(2);
 const langFolder = args[0] === 'en' ? 'en' : 'pt'
-const folderPath = `../../${langFolder}/docs`
+const folderPath = `../${langFolder}/docs`
 const mdFiles = fs.readdirSync(folderPath, 'utf-8').filter(file => file.endsWith('.md'));
 const dateFilesRegex = /^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}\.md$/;
 const dateFilesSet = new Set(mdFiles.filter(fileName => fileName.match(dateFilesRegex)));
-const mkDocsYaml = yaml.parseDocument(fs.readFileSync(`../../${langFolder}/mkdocs.yml`, 'utf8')).toJSON()
+const mkDocsYaml = yaml.parseDocument(fs.readFileSync(`../${langFolder}/mkdocs.yml`, 'utf8')).toJSON()
 const navItemDatesSet = new Set(mkDocsYaml.nav.map(obj => Object.values(obj)[0]))
 
 if (navItemDatesSet.size !== dateFilesSet.size || !(dateFilesSet.isSubsetOf(navItemDatesSet))) {
