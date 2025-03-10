@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '22'
       - run: |
-          node yamlPagesValidator.js pt
+          bash -c 'cd scripts && node yamlPagesValidator.js pt'
 
   deploy:
     needs: validate-yml
