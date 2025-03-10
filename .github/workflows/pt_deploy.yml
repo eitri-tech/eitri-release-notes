@@ -6,11 +6,22 @@ on:
 permissions:
   contents: write
 jobs:
+  validate-yml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate mkdocs yml
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+      - run: |
+          node yamlPagesValidator.js pt
+
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Git Credentials And Build
+      - name: Configure Git Credentials, Build and Deploy
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
