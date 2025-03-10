@@ -10,7 +10,11 @@ plugins:
         'index.md': '24-02-2025.md' # Sempre atualizar para release note mais recente
 nav:
   - Release - 24/02/2025: '24-02-2025.md'
+extra_css:
+  - stylesheets/extra.css
 theme:
+  logo: assets/overrides/eitri-logo.svg
+  favicon: assets/overrides/android-chrome-192x192.png
   # Tema visual utilizado
   name: material
   palette:
@@ -19,7 +23,7 @@ theme:
     toggle:
       icon: material/brightness-auto
       name: Switch to light mode
-    primary: blue grey
+    primary: custom
     accent: lime
 
   # Palette toggle for light mode
@@ -28,7 +32,7 @@ theme:
     toggle:
       icon: material/brightness-7
       name: Switch to dark mode
-    primary: blue grey
+    primary: custom
     accent: lime
 
   # Palette toggle for dark mode
@@ -37,5 +41,5 @@ theme:
     toggle:
       icon: material/brightness-4
       name: Switch to system preference
-    primary: blue grey
+    primary: custom
     accent: lime
