@@ -1,5 +1,11 @@
+import { argv } from 'node:process';
 import * as fs from 'fs';
 import * as yaml from 'yaml';
+import stringConstantsFile from './generateTemplateStrings.json' with { type: "json" };
+
+const args = argv.slice(2);
+const lang = args[0] === 'pt' ? 'pt' : 'en'
+const stringConstants = stringConstantsFile[lang]
 
 const date = new Date();
 let currentDate = new Intl.DateTimeFormat("ban", {day: '2-digit', month: '2-digit', year: 'numeric'}).format(date)
@@ -11,9 +17,9 @@ currentDate = currentDate.replace(/\//g, '-')
  */
 function createSection(sectionName, finalSection = false) {
     let sectionString = `## ${sectionName} v.X.X.X\n\n`
-    sectionString += createH3Section("Novas feautres")
-    sectionString += createH3Section("Correções")
-    sectionString += createH3Section("Outras mudanças")
+    sectionString += createH3Section(stringConstants.new_features)
+    sectionString += createH3Section(stringConstants.fixes)
+    sectionString += createH3Section(stringConstants.other_changes)
 
     const sectionTerminator = finalSection ? '\n' : '\n\n'
     sectionString += `---${sectionTerminator}`
@@ -36,15 +42,15 @@ function createPageTemplate() {
     for (let index = 0; index < projects.length; index++) {
         fileContent += createSection(projects[index], index === projects.length - 1)
     }
-    fs.writeFileSync(`../pt/docs/${currentDate}.md`, fileContent)
+    fs.writeFileSync(`../${lang}/docs/${currentDate}.md`, fileContent)
 }
 
 function updateYaml() {
-    const currentYaml = yaml.parseDocument(fs.readFileSync('../pt/mkdocs.yml', 'utf8')).toJSON()
+    const currentYaml = yaml.parseDocument(fs.readFileSync(`../${lang}/mkdocs.yml`, 'utf8')).toJSON()
     currentYaml.nav.push({[`Release - ${currentDate}`]: `${currentDate}.md`})
     const redirectsPluginIndex = currentYaml.plugins.findIndex(obj => Object.keys(obj)[0] === 'redirects')
     currentYaml.plugins[redirectsPluginIndex].redirects.redirect_maps['index.md'] = `${currentDate}.md`
-    fs.writeFileSync('../pt/mkdocs.yml', yaml.stringify(currentYaml))
+    fs.writeFileSync(`../${lang}/mkdocs.yml`, yaml.stringify(currentYaml))
 }
 
 createPageTemplate()
