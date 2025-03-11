@@ -1,4 +1,4 @@
-name: Portuguese
+name: Deploy
 on:
   push:
     branches:
@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '22'
       - run: |
-          bash -c 'cd scripts && node yamlPagesValidator.js pt'
+          bash -c 'cd scripts && node yamlPagesValidator.js en'
 
   deploy:
     needs: validate-yml
@@ -38,7 +38,7 @@ jobs:
             mkdocs-material-
       - run: pip install mkdocs-material
       - run: pip install mkdocs-redirects
-      - run: bash -c 'cd pt && git pull && mkdocs gh-deploy'
+      - run: bash -c 'cd en && git pull && mkdocs gh-deploy'
 
       - name: Checkout
         uses: actions/checkout@v1
