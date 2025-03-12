@@ -1,0 +1,39 @@
+site_name: Eitri Release Notes
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+plugins:
+  - redirects:
+      redirect_maps:
+        index.md: 24-02-2025.md
+nav:
+  - Release - 24/02/2025: 24-02-2025.md
+extra_css:
+  - stylesheets/extra.css
+theme:
+  logo: assets/overrides/eitri-logo.svg
+  favicon: assets/overrides/android-chrome-192x192.png
+  name: material
+  palette:
+    - media: (prefers-color-scheme)
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: custom
+      accent: lime
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: custom
+      accent: lime
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: custom
+      accent: lime
