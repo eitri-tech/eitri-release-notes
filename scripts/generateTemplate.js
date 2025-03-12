@@ -4,6 +4,8 @@ import * as yaml from 'yaml';
 const date = new Date();
 let currentDate = new Intl.DateTimeFormat("ban", {day: '2-digit', month: '2-digit', year: 'numeric'}).format(date)
 currentDate = currentDate.replace(/\//g, '-')
+let [month, day, year] = currentDate.split('-');
+currentDate = `${day}-${month}-${year}`;
 
 /**
  * 
